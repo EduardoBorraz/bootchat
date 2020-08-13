@@ -159,9 +159,6 @@ function search(location, cuisineId, categoryId, session){
             } else {
                 console.log('Found restaurants:')
                 console.log("==========",response.body);
-                //var resultsCount = JSON.parse(body).results_found;
-                //console.log('Found:' + resultsCount);
-                //session.send('I have found ' + resultsCount + ' restaurants for you!');
                 var results = JSON.parse(body).restaurants;
                 console.log("XXXXXXXXXXXX",results);
                 var msg = presentInCards(session, results);
